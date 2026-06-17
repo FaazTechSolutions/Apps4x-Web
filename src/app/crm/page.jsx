@@ -321,10 +321,11 @@ function CommandBar({ onRun }) {
 
 // --- rail ---------------------------------------------------------
 const MODULES = [
-  { key: "cx", label: "Helpdesk", glyph: "◈", count: 12 },
-  { key: "crm", label: "CRM", glyph: "◇", live: true, count: 8 },
+  { key: "cx", label: "Helpdesk", glyph: "◈", count: 12, href: "/helpdesk" },
+  { key: "crm", label: "CRM", glyph: "◇", live: true, count: 8, href: "/crm" },
   { key: "hrm", label: "HRM", glyph: "○", count: 7 },
   { key: "erp", label: "ERP", glyph: "□", count: 2 },
+  { key: "gov", label: "Governance", glyph: "🛡️", live: true, href: "/governance" },
 ];
 function Rail({ active, setActive }) {
   const T = useT();
@@ -334,11 +335,11 @@ function Rail({ active, setActive }) {
       {MODULES.map((m) => {
         const on = active === m.key;
         return (
-          <button key={m.key} onClick={() => setActive(m.key)} title={m.label} style={{ position: "relative", width: 52, height: 52, borderRadius: 12, cursor: "pointer", background: on ? T.panelHi : "transparent", border: `1px solid ${on ? T.lineHi : "transparent"}`, color: on ? T.text : T.textFaint, transition: "all .15s", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2 }}>
+          <a key={m.key} href={m.href || "#"} title={m.label} style={{ position: "relative", width: 52, height: 52, borderRadius: 12, cursor: "pointer", background: on ? T.panelHi : "transparent", border: `1px solid ${on ? T.lineHi : "transparent"}`, color: on ? T.text : T.textFaint, transition: "all .15s", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2, textDecoration: "none" }}>
             <span style={{ font: `400 18px ${FONT_STACK.body}` }}>{m.glyph}</span>
             <span style={{ font: `500 9px ${FONT_STACK.body}` }}>{m.label}</span>
             {m.count && <span style={{ position: "absolute", top: 4, right: 6, minWidth: 16, height: 16, padding: "0 4px", borderRadius: 8, background: m.live ? T.govern : T.lineHi, color: m.live ? T.badgeFill : T.textDim, font: `600 9px ${FONT_STACK.mono}`, display: "grid", placeItems: "center" }}>{m.count}</span>}
-          </button>
+          </a>
         );
       })}
     </div>

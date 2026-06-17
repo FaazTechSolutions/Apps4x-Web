@@ -194,6 +194,9 @@ export default function Home() {
           <a href="/helpdesk" className="nav-item" target='_blank'>
             <span>🎧</span> Helpdesk
           </a>
+          <a href="/governance" className="nav-item" target='_blank'>
+            <span>🛡️</span> Governance
+          </a>
         </nav>
 
         {/* Dynamic User Profile Indicator */}
