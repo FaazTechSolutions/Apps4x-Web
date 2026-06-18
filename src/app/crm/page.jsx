@@ -328,6 +328,7 @@ const MODULES = [
   { key: "erp", label: "ERP", glyph: "□", count: 2 },
   { key: "gov", label: "Governance", glyph: "🛡️", live: true, href: "/governance" },
   { key: "del", label: "Delegation", glyph: "🤝", live: true, count: 2, href: "/delegation" },
+  { key: "proto", label: "Prototype", glyph: "🧪", live: true, href: "/prototype" },
 ];
 function Rail({ active, setActive }) {
   const T = useT();

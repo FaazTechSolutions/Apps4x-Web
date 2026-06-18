@@ -203,6 +203,9 @@ export default function Home() {
           <a href="/delegation" className="nav-item" target='_blank'>
             <span>🤝</span> Delegation
           </a>
+          <a href="/prototype" className="nav-item" target='_blank'>
+            <span>🧪</span> Prototype
+          </a>
         </nav>
 
         {/* Dynamic User Profile Indicator */}
