@@ -506,12 +506,13 @@ function ChatView({ conv, onBack }) {
    LEFT RAIL (CROSS-MODULE SHELL)
    ═══════════════════════════════════════════ */
 const MODULES = [
+    { key: "inbox", label: "Inbox", glyph: "📥", live: true, count: 5, href: "/inbox" },
     { key: "cx", label: "Helpdesk", glyph: "◈", live: true, count: 12, href: "/helpdesk" },
     { key: "crm", label: "CRM", glyph: "◇", count: 4, href: "/crm" },
     { key: "hrm", label: "HRM", glyph: "○", count: 7 },
     { key: "erp", label: "ERP", glyph: "□", count: 2 },
     { key: "gov", label: "Governance", glyph: "🛡️", live: true, href: "/governance" },
-    { key: "inbox", label: "Inbox", glyph: "📥", live: true, count: 5, href: "/inbox" }
+    { key: "del", label: "Delegation", glyph: "🤝", live: true, count: 2, href: "/delegation" },
 ];
 
 function Rail({ active }) {

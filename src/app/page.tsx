@@ -188,6 +188,9 @@ export default function Home() {
           <a href="/" className="nav-item active">
             <span>🌴</span> Leave Portal
           </a>
+           <a href="/inbox" className="nav-item" target='_blank'>
+            <span>📥</span> Inbox
+          </a>
           <a href="/crm" className="nav-item" target='_blank'>
             <span>📈</span> CRM
           </a>
@@ -197,8 +200,8 @@ export default function Home() {
           <a href="/governance" className="nav-item" target='_blank'>
             <span>🛡️</span> Governance
           </a>
-          <a href="/inbox" className="nav-item" target='_blank'>
-            <span>📥</span> Inbox
+          <a href="/delegation" className="nav-item" target='_blank'>
+            <span>🤝</span> Delegation
           </a>
         </nav>
 
