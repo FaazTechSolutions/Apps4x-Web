@@ -46,7 +46,7 @@
   --text-main: #0f172a;
   --text-muted: #475569;
   --text-dark: #64748b;
-  
+
   --border-light: rgba(0, 0, 0, 0.08);
   --border-focus: rgba(99, 102, 241, 0.45);
 
@@ -63,7 +63,7 @@
   --radius-md: 14px;
   --radius-lg: 20px;
   --radius-round: 50%;
-  
+
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -178,6 +178,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-shrink: 0;
 }
 
 .user-avatar {
@@ -198,6 +199,7 @@ a:hover {
 .user-info {
   display: flex;
   flex-direction: column;
+  white-space: nowrap;
 }
 
 .user-name {
