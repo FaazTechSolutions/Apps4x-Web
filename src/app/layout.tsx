@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -27,24 +28,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
       <head>
-        <script
+      </head>
+      <body>
+        {children}
+        <Script
           src="https://portaldev.mawarid.com.sa:6080/platform-test-ui/widget.js"
           data-agent-id="agent_1778665894232"
           data-token="pub_agent_1778665894232_1779432810590_e5ru1koo"
           data-position="bottom-left"
           data-theme="modern"
-          async
-        ></script>
-        {/* <script
-          src="https://portaldev.mawarid.com.sa:6080/platform-test-ui/widget.js"
-          data-agent-id="agent_1778129904545"
-          data-token="pub_agent_1778129904545_1779433185510_g50akfe4"
-          data-position="top-left"
-          data-theme="modern"
-          async
-        ></script> */}
-      </head>
-      <body>{children}</body>
+          strategy="afterInteractive"
+        />
+      </body>
     </html>
   );
 }
