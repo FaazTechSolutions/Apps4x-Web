@@ -206,6 +206,9 @@ export default function Home() {
           <a href="/prototype" className="nav-item" target='_blank'>
             <span>🧪</span> Prototype
           </a>
+          <a href="/queue" className="nav-item" target='_blank'>
+            <span>🚦</span> Queue
+          </a>
         </nav>
 
         {/* Dynamic User Profile Indicator */}

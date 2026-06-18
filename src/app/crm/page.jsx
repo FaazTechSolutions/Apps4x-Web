@@ -329,6 +329,7 @@ const MODULES = [
   { key: "gov", label: "Governance", glyph: "🛡️", live: true, href: "/governance" },
   { key: "del", label: "Delegation", glyph: "🤝", live: true, count: 2, href: "/delegation" },
   { key: "proto", label: "Prototype", glyph: "🧪", live: true, href: "/prototype" },
+  { key: "queue", label: "Queue", glyph: "🚦", live: true, href: "/queue" },
 ];
 function Rail({ active, setActive }) {
   const T = useT();
