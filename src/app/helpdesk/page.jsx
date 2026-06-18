@@ -304,6 +304,7 @@ const MODULES = [
   { key: "hrm", label: "HRM", glyph: "○", count: 7 },
   { key: "erp", label: "ERP", glyph: "□", count: 2 },
   { key: "gov", label: "Governance", glyph: "🛡️", live: true, href: "/governance" },
+  { key: "inbox", label: "Inbox", glyph: "📥", live: true, count: 5, href: "/inbox" }
 ];
 
 function Rail({ active, setActive }) {
