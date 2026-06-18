@@ -212,6 +212,9 @@ export default function Home() {
           <a href="/blueprint" className="nav-item" target='_blank'>
             <span>📐</span> Blueprint
           </a>
+          <a href="/GRC" className="nav-item" target='_blank'>
+            <span>🏛️</span> GRC
+          </a>
         </nav>
 
         {/* Dynamic User Profile Indicator */}

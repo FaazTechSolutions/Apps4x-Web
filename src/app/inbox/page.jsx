@@ -516,6 +516,7 @@ const MODULES = [
     { key: "proto", label: "Prototype", glyph: "🧪", live: true, href: "/prototype" },
     { key: "queue", label: "Queue", glyph: "🚦", live: true, href: "/queue" },
     { key: "blueprint", label: "Blueprint", glyph: "📐", live: true, href: "/blueprint" },
+    { key: "grc", label: "GRC", glyph: "🏛️", live: true, href: "/GRC" },
 ];
 
 function Rail({ active }) {
