@@ -660,6 +660,7 @@ const MODULES = [
   { key: "del", label: "Delegation", glyph: "🤝", live: true, count: 2, href: "/delegation" },
   { key: "proto", label: "Prototype", glyph: "🧪", live: true, href: "/prototype" },
   { key: "queue", label: "Queue", glyph: "🚦", live: true, href: "/queue" },
+  { key: "blueprint", label: "Blueprint", glyph: "📐", live: true, href: "/blueprint" },
 ];
 
 function Rail({ active }) {

@@ -209,6 +209,9 @@ export default function Home() {
           <a href="/queue" className="nav-item" target='_blank'>
             <span>🚦</span> Queue
           </a>
+          <a href="/blueprint" className="nav-item" target='_blank'>
+            <span>📐</span> Blueprint
+          </a>
         </nav>
 
         {/* Dynamic User Profile Indicator */}
