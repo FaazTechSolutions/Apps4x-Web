@@ -215,6 +215,9 @@ export default function Home() {
           <a href="/GRC" className="nav-item" target='_blank'>
             <span>🏛️</span> GRC
           </a>
+          <a href="/orchestration" className="nav-item" target='_blank'>
+            <span>⚙️</span> Blueprint Central
+          </a>
         </nav>
 
         {/* Dynamic User Profile Indicator */}

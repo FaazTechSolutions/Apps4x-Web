@@ -14,6 +14,7 @@ const MODULES = [
     { key: "queue", label: "Queue", glyph: "🚦", live: true, href: "/queue" },
     { key: "blueprint", label: "Blueprint", glyph: "📐", live: true, href: "/blueprint" },
     { key: "grc", label: "GRC", glyph: "🏛️", live: true, href: "/GRC" },
+    { key: "orch", label: "Orchestration", glyph: "⚙️", live: true, href: "/orchestration" },
 ];
 
 function Rail({ active }) {
