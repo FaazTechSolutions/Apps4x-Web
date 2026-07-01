@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { PersonaId, LeaveRequest, LeaveBalance, LeaveStatus, LeaveType } from '@/types';
 import {
   PERSONAS,
@@ -26,6 +26,17 @@ export default function Home() {
   const [requests, setRequests] = useState<LeaveRequest[]>([]);
   const [balance, setBalance] = useState<LeaveBalance | null>(null);
   const [toasts, setToasts] = useState<Toast[]>([]);
+  const navRef = useRef<HTMLElement>(null);
+
+  const scrollNav = (direction: 'left' | 'right') => {
+    if (navRef.current) {
+      const scrollAmount = 300;
+      navRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   // Prevent hydration mismatches by ensuring client-only rendering of localstorage data
   useEffect(() => {
@@ -184,41 +195,52 @@ export default function Home() {
         </div>
 
         {/* Premium Navigation Hub */}
-        <nav className="header-nav">
-          <a href="/" className="nav-item active">
-            <span>🌴</span> Leave Portal
-          </a>
-           <a href="/inbox" className="nav-item" target='_blank'>
-            <span>📥</span> Inbox
-          </a>
-          <a href="/crm" className="nav-item" target='_blank'>
-            <span>📈</span> CRM
-          </a>
-          <a href="/helpdesk" className="nav-item" target='_blank'>
-            <span>🎧</span> Helpdesk
-          </a>
-          <a href="/governance" className="nav-item" target='_blank'>
-            <span>🛡️</span> Governance
-          </a>
-          <a href="/delegation" className="nav-item" target='_blank'>
-            <span>🤝</span> Delegation
-          </a>
-          <a href="/prototype" className="nav-item" target='_blank'>
-            <span>🧪</span> Prototype
-          </a>
-          <a href="/queue" className="nav-item" target='_blank'>
-            <span>🚦</span> Queue
-          </a>
-          <a href="/blueprint" className="nav-item" target='_blank'>
-            <span>📐</span> Blueprint
-          </a>
-          <a href="/GRC" className="nav-item" target='_blank'>
-            <span>🏛️</span> GRC
-          </a>
-          <a href="/orchestration" className="nav-item" target='_blank'>
-            <span>⚙️</span> Blueprint Central
-          </a>
-        </nav>
+        <div className="nav-wrapper">
+          <button className="scroll-btn" onClick={() => scrollNav('left')} aria-label="Scroll left">
+            &lt;
+          </button>
+          <nav className="header-nav" ref={navRef}>
+            <a href="/" className="nav-item active">
+              <span>🌴</span> Leave Portal
+            </a>
+             <a href="/inbox" className="nav-item" target='_blank'>
+              <span>📥</span> Inbox
+            </a>
+            <a href="/crm" className="nav-item" target='_blank'>
+              <span>📈</span> CRM
+            </a>
+            <a href="/helpdesk" className="nav-item" target='_blank'>
+              <span>🎧</span> Helpdesk
+            </a>
+            <a href="/governance" className="nav-item" target='_blank'>
+              <span>🛡️</span> Governance
+            </a>
+            <a href="/delegation" className="nav-item" target='_blank'>
+              <span>🤝</span> Delegation
+            </a>
+            <a href="/prototype" className="nav-item" target='_blank'>
+              <span>🧪</span> Prototype
+            </a>
+            <a href="/queue" className="nav-item" target='_blank'>
+              <span>🚦</span> Queue
+            </a>
+            <a href="/blueprint" className="nav-item" target='_blank'>
+              <span>📐</span> Blueprint
+            </a>
+            <a href="/GRC" className="nav-item" target='_blank'>
+              <span>🏛️</span> GRC
+            </a>
+            <a href="/orchestration" className="nav-item" target='_blank'>
+              <span>⚙️</span> Blueprint Central
+            </a>
+            <a href="/approval-routing" className="nav-item" target='_blank'>
+              <span>🔀</span> Approval Routing
+            </a>
+          </nav>
+          <button className="scroll-btn" onClick={() => scrollNav('right')} aria-label="Scroll right">
+            &gt;
+          </button>
+        </div>
 
         {/* Dynamic User Profile Indicator */}
         <div className="user-profile">
